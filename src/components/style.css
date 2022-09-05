@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 75%;
+}
+
+.container .header {
+    position: relative;
+    text-align: center;
+    color: #102a42;
+    font-size: 20px;
+}
+
+.container .header::after {
+    content: "";
+    position: absolute;
+    width: 7%;
+    height: 5px;
+    background-color: #c59d5f;
+    left: 46%;
+}
+
+.container .btns {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 30px;
+}
+
+.container .btns button {
+    margin-left: 15px;
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    font-size: 18px;
+    color: #c59d5f;
+    padding: 8px;
+    transition: all .3s ease;
+    text-transform: capitalize;
+}
+
+.container .btns button:hover {
+    background-color: #c59d5f;
+    color: #fff;
+    border-radius: 7px;
+}
+
+.meals {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+    gap: 60px;
+}
+
+@media (max-width: 1200px) {
+    .meals {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr); 
+    }
+}
+
+.meal {
+    display: flex;
+}
+
+.meal img {
+    height: 150px;
+    width: 200px;
+    border: 5px solid #c59d5f;
+    margin-right: 15px;
+}
+
+.meal .price-info {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.meal .price-info::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -10px;
+    background-color: #617d98;
+}
+
+.meal .price-info p {
+    color: #102a42;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.meal .price-info span {
+    color: #c59d5f;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.meal p {
+    color: #617d98;
+}
+
+
